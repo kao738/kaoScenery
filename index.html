@@ -1,0 +1,85 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- ウェブページの文字エンコーディングを指定するために使用されます。 -->
+    <meta charset="utf-8" />
+    <!-- ウェブページのビューポート（表示領域）の設定を指定します。 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- ウェブページのタイトルに使用されます。 -->
+    <title>Taro's Scenery</title>
+    <!-- ウェブページの簡潔な説明や概要を提供するために使用されます。 -->
+    <meta name="description" content="フォトグラファーの太田香織です" />
+    <!-- モバイルブラウザが電話番号の検出やリンク化を行わないように設定しています。 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- ファビコンを設定しています。 -->
+    <link rel="shortcut icon" href="./image/favicon.ico">
+    <!-- reset.cssは、destyleを使用しています。 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <!-- スタイルシート（css）を呼び出しています -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header u-wrapper">
+      <h1 class="header__title reveal">Kao's Scenery</h1>
+      <nav>
+        <ul class="header__nav reveal">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <main>
+      <!-- about -->
+      <section class="about u-wrapper u-sectionWrapper" id="about">
+        <h2 class="u-sectionTitle reveal">ABOUT</h2>
+        <div class="about__container">
+          <img
+            class="about__img reveal"
+            src="image/about-avatar.png"
+            alt="kaoのサムネイル"
+          />
+          <div class="about__textContainer">
+            <h3 class="about__name reveal">Kaori Ota</h3>
+            <p class="about__text u-sectionText reveal">
+              フォトグラファーのKaori Otaです。<br />
+              よろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /about -->
+      <!-- works -->
+      <section class="works u-wrapper u-sectionWrapper" id="works">
+        <h2 class="u-sectionTitle reveal">WORKS</h2>
+        <ul class="works__container">
+          <li class="works__item">
+            <img class="works__img reveal" src="./image/akinosora.png" alt="秋の空" />
+            <p class="works__itemText u-sectionText reveal">秋の空</p>
+          </li>
+          <li class="works__item">
+            <img class="works__img reveal" src="./image/katatumuri.png" alt="カタツムリ" />
+            <p class="works__itemText u-sectionText reveal">カタツムリ</p>
+          </li>
+          <!-- <li class="works__item">
+            <img class="works__img" src="image/works3.png" alt="湾曲した階段" />
+            <p class="works__itemText u-sectionText">Architecture</p>
+          </li> -->
+        </ul>
+      </section>
+      <!-- /works -->
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <small class="footer__copyright reveal">© 2025 kao's Scenery</small>
+    </footer>
+    <!-- /footer -->
+  </body>
+</html>
