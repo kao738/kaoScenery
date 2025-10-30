@@ -256,3 +256,60 @@ img:hover {
   transition: 0.4s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+:target {
+  scroll-margin-top: calc(var(--header-h, 72px) + 16px);
+}
+
+html {
+  scroll-behavior: smooth;
+} /* なめらかスクロール */
+.back-to-top {
+  position: fixed; /* ← おすわり！ */
+  right: clamp(12px, 2vw, 20px);
+  bottom: clamp(12px, 2vw, 20px);
+  z-index: 1000;
+  display: inline-grid;
+  place-items: center;
+  width: 80px; /* タップしやすいサイズ */
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+/* 画像をコンテナにフィット */
+.back-to-top img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ちょいだけリアクション */
+.back-to-top:hover {
+  transform: translateY(-2px);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
+/* iOSのホームバー安全域 */
+@supports (padding: max(0px)) {
+  .back-to-top {
+    right: max(12px, env(safe-area-inset-right));
+  }
+}
+/* 低モーション希望の人へは静かに */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .back-to-top {
+    transition: none;
+  }
+}

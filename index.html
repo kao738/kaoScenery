@@ -77,6 +77,47 @@
         </ul>
       </section>
       <!-- /works -->
+       <script>
+(() => {
+  const btn  = document.querySelector('.back-to-top');
+  const hero = document.querySelector('.hero');
+
+  if (!btn) return; // ボタンが無ければ何もしない
+
+  // Heroが無いページ（下層など）は最初から表示
+  if (!hero) {
+    btn.classList.add('is-visible');
+    return;
+  }
+
+  // Heroが画面に映っている間は非表示、見えなくなったら表示
+  const io = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        // Heroが見えてる → 隠す
+        btn.classList.remove('is-visible');
+      } else {
+        // Heroが見えなくなった → 出す
+        btn.classList.add('is-visible');
+      }
+    },
+    {
+      root: null,          // ビューポート
+      threshold: 0,        // 1pxでも見えてたら「見えてる」と判定
+      rootMargin: '0px'    // 固定ヘッダーがあるなら例えば '-80px 0px 0px 0px'
+    }
+  );
+
+  io.observe(hero);
+})();
+</script>
+
+    <!--トップへ戻るボタン-->
+<a href="#top" class="back-to-top" aria-label="ページ先頭へ戻る">
+  <img src="./image/owl-button.png" alt="" width="48" height="48" decoding="async">
+</a>
+
     </main>
     <!-- footer -->
     <footer class="footer">
