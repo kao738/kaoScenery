@@ -208,3 +208,51 @@ footer
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
 }
+body {
+  font-family: "Noto Serif JP", "Playfair Display", serif;
+  color: #222;
+  background-color: #fdfcf8;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.03em;
+}
+body {
+  background-color: #fbfaf5; /* 雲母白 */
+  color: #333;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #fbfaf5 0%, #f3f2ee 100%);
+
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.05em;
+  color: #245e62; /* 深めのグリーンで和モダン */
+}
+section {
+  padding: 80px 20px;
+}
+
+img {
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+img:hover {
+  transform: scale(1.02);
+  transition: 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
